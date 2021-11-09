@@ -242,7 +242,7 @@ if (anu.action == 'add' && !mem.includes(client.user.jid)) {
             groupMembers.length
           }&memcount=${memeg}&gcname=${encodeURI(
             mdata.subject
-          )}&pp=${pp_user}&bg=https://i.postimg.cc/rFkw8MpX/IMG-20210807-151325.jpg`
+          )}&pp=${pp_user}&bg=xeon.jpg`
         );
         buttons = [
           { buttonId: `verify`, buttonText: { displayText: "𝑽𝒆𝒓𝒊𝒇𝒚㋛︎" }, type: 1 },
