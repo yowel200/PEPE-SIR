@@ -1501,6 +1501,8 @@ ${readmore}
 │ ⬡ ${prefix}fdeface
 │ ⬡ ${prefix}attp text
 │ ⬡ ${prefix}emoji
+│ ⬡ ${prefix}dropwater text
+│ ⬡ ${prefix}naruto text
 │ ⬡ ${prefix}golden text
 │ ⬡ ${prefix}flower text
 │ ⬡ ${prefix}wooden text
@@ -2881,13 +2883,6 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/dropwater?apikey=${zeksApikey}&text=${F}`)
                    xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
-                        					break
-       case 'burningimage':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} https://www.linkpicture.com/q/IMG-20211103-WA0014.jpg*`)
-                   F = body.slice(5)
-                   reply(mess.wait)
-                   anu = await getBuffer(`${ApiZeks}/api/burning-image?apikey=${zeksApikey}&image=${F}`)
-                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'logoa':
                    if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe&lol*`)
@@ -2915,6 +2910,51 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/marvellogo?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
                    xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                                      break
+       case 'flower':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
+                   var F = body.slice(8)
+				   var F1 = F.split("|")[0];
+				   var F2 = F.split("|")[1]; 
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/flowertext?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   break
+       case 'crossfire':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
+                   var F = body.slice(8)
+				   var F1 = F.split("|")[0];
+				   var F2 = F.split("|")[1]; 
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/crosslogo?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   break
+       case 'flametext':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
+                   var F = body.slice(8)
+				   var F1 = F.split("|")[0];
+				   var F2 = F.split("|")[1]; 
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/flametext?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   break
+       case 'silktext':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
+                   var F = body.slice(8)
+				   var F1 = F.split("|")[0];
+				   var F2 = F.split("|")[1]; 
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/silktext?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   break
+       case 'naruto':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
+                   var F = body.slice(8)
+				   var F1 = F.split("|")[0];
+				   var F2 = F.split("|")[1]; 
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/naruto?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'leavest':  
                    if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe*`)
@@ -2935,6 +2975,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                    F = body.slice(7)
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/bneon?apikey=${zeksApikey}&text=${F}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                   break        
+                          case 'matrix':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe*`)
+                   F = body.slice(7)
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/matrix?apikey=${zeksApikey}&text=${F}`)
                    xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break                   
        case 'wall':
