@@ -2881,6 +2881,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                    reply(mess.wait)
                    anu = await getBuffer(`${ApiZeks}/api/dropwater?apikey=${zeksApikey}&text=${F}`)
                    xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
+                        					break
+       case 'burningimage':
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} https://www.linkpicture.com/q/IMG-20211103-WA0014.jpg*`)
+                   F = body.slice(5)
+                   reply(mess.wait)
+                   anu = await getBuffer(`${ApiZeks}/api/burning-image?apikey=${zeksApikey}&image=${F}`)
+                   xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'logoa':
                    if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe&lol*`)
