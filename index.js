@@ -2921,15 +2921,13 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                    xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
                    break
        case 'crossfire':
-                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
-                   var F = body.slice(8)
-				   var F1 = F.split("|")[0];
-				   var F2 = F.split("|")[1]; 
+                   if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe*`)
+                   F = body.slice(7)
                    reply(mess.wait)
-                   anu = await getBuffer(`${ApiZeks}/api/crosslogo?text1=${F1}&text2=${F2}&apikey=${zeksApikey}`)
+                   anu = await getBuffer(`${ApiZeks}/api/crosslogo?apikey=${zeksApikey}&text=${F}`)
                    xeon.sendMessage(from, anu, image, {thumbnail: Buffer.alloc(0),caption: `OK it's done\n\nHow is it? `, quoted: mek})
-                   break
-       case 'flametext':
+                   break        
+                          case 'flametext':
                    if (args.length < 1) return reply(`[  ×  ] Example :\n*${prefix}${command} pepe | lol*`)
                    var F = body.slice(8)
 				   var F1 = F.split("|")[0];
