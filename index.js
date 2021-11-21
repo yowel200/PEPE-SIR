@@ -2125,6 +2125,10 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                               "rowId": ""
                            },
                            {
+                              "title": "Group",
+                              "rowId": ""                              
+                           },
+                           {
                               "title": "Rules",
                               "rowId": ""
                            },
@@ -2161,6 +2165,30 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
  listType: 1
 }
 xeon.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted:ftrol})
+break
+case 'group':
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
+ listMsgg = {
+ buttonText: 'CLICK HERE',
+ footerText: '𝙿𝙴𝙿𝙴 𝚂𝙸𝚁',
+ description: `OPEN OR CLOSE GROUP`,
+ sections: [
+                     {
+                      "title": `ᴘᴇᴘᴇ`,
+ rows: [
+                          {
+                              "title": "opengroup",
+                              "rowId": ""
+                           },
+                           {
+                              "title": "closegroup",
+                              "rowId": ""
+                           }
+                        ]
+                     }],
+ listType: 1
+}
+xeon.sendMessage(from, listMsgg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted:ftrol})
 break
 case 'downloadmenu':
 menu = `︎𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥𝘦𝘳 𝘔𝘦𝘯𝘶
@@ -3428,6 +3456,7 @@ case 'linkwa':
         });
         break;
       case "closegc":
+      case "closegroup":
         if (!mek.key.fromMe && !isGroupAdmins) return reply("Only admin");
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
@@ -3490,6 +3519,7 @@ if (Number(oi2) >= 50) return reply('Most!')
         reply("```Succes revoke link group```");
         break;
       case "opengc":
+            case "opengroup":
         if (!mek.key.fromMe && !isGroupAdmins) return reply("Only admin");
         if (!isBotGroupAdmins) return reply("Bot not admin");
         if (!isGroup) return;
@@ -4097,14 +4127,14 @@ case "intake3": // by pepe
         if (!mek.key.fromMe) return;
         sendButMessage(from, `GROUP SETTING`, `Please choose one/nᴘᴇᴘᴇ sɪʀ`, [
           {
-            buttonId: `opengc`,
+            buttonId: `opengroup`,
             buttonText: {
               displayText: `OPEN`,
             },
             type: 1,
           },
           {
-            buttonId: `closegc`,
+            buttonId: `closegroup`,
             buttonText: {
               displayText: `CLOSE`,
             },
