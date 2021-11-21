@@ -2183,6 +2183,10 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
                            {
                               "title": "closegroup",
                               "rowId": ""
+                           },   
+                           {
+                              "title": "revokelink",
+                              "rowId": ""                              
                            }
                         ]
                      }],
@@ -3511,6 +3515,7 @@ if (Number(oi2) >= 50) return reply('Most!')
 	  }
 }
 	  break
+	  case "revokelink":
       case "revoke":
         if (!mek.key.fromMe && !isGroupAdmins) return reply("Only admin");
         if (!isBotGroupAdmins) return reply("Bot not admin");
@@ -4123,32 +4128,7 @@ case "intake3": // by pepe
           },
         ]);
         break;
-      case "group":
-        if (!mek.key.fromMe) return;
-        sendButMessage(from, `GROUP SETTING`, `Please choose one/nᴘᴇᴘᴇ sɪʀ`, [
-          {
-            buttonId: `opengroup`,
-            buttonText: {
-              displayText: `OPEN`,
-            },
-            type: 1,
-          },
-          {
-            buttonId: `closegroup`,
-            buttonText: {
-              displayText: `CLOSE`,
-            },
-            type: 1,
-          },
-          {
-            buttonId: `revoke`,
-            buttonText: {
-              displayText: `REVOKE INVITE`,
-            },
-            type: 1,
-          },
-        ]);
-        break;
+
       //end
       //------------------< Fitur downloader >-------------------
       case "tiktok":
